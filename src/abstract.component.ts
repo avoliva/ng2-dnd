@@ -125,6 +125,9 @@ export abstract class AbstractComponent {
         this._elem.onmousedown = (event: MouseEvent) => {
             this._target = event.target;
         };
+        this._elem.ontouchstart = (event: TouchEvent) => {
+            this._target = event.target;
+        };
         this._elem.ondragstart = (event: DragEvent) => {
             if (this._dragHandle) {
                 if (!this._dragHandle.contains(<Element>this._target)) {
