@@ -6,7 +6,7 @@
     "test": "karma start",
     "test-watch": "tsc --noUnusedParameters --noUnusedLocals && karma start --no-single-run --auto-watch",
     "commit": "npm run prepublish && npm test && git-cz",
-    "prepublish": "ngc --noUnusedParameters --noUnusedLocals && npm run build",
+    "preinstall": "ngc --noUnusedParameters --noUnusedLocals && npm run build",
     "build": "webpack --optimize-minimize && cp style.css bundles/style.css",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
